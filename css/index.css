@@ -8,24 +8,18 @@ body {
     
 }
 a {
-		color: rgba(256, 256, 256, 0.6)!important;
-		&:hover {
-			color: white;
-		}
-		
+	color: rgba(256, 256, 256, 0.6)!important;
+			
 	}
 .theme-bg-primary {
 	background-color: #434E5E;
 }
 
-.theme-bg-primary-darken {
-	background-color: darken(#434E5E, 20%);
-}
 
 
 
 .progress {
-	@include border-radius(2px);
+	border-radius:2px;
 	height: 0.5rem !important;
 }
 
@@ -73,7 +67,7 @@ a {
 		display:inline-block;
 		width: 24px;
 		height: 24px;
-		@include border-radius(0.125rem);
+		border-radius:0.125rem;
 		background: white;
 		color: #434E5E;
 		
@@ -85,39 +79,42 @@ a {
 	font-size: 1.25rem;
 	position: relative;
 	color: #434E5E;
-	
-	&:after {
+}	
+.resume-section-title::after {
 		content: "";
 		position: absolute;
 		left: 0;
 		bottom: 0;
 		width: 100%;
 		height: 1.5px;
-		background: lighten(#434E5E, 30%);
+		background: #7d858e;
 	}
-}
+
 
 .resume-section-content {
-	color: lighten(#434E5E, 10%);;
+	color: #7d858e;
 }
 
 
 .resume-timeline {
 	padding-left: 2rem;
-	&:before {
+	}
+
+.resume-timeline::before{
+	
 		content: "";
 		display: inline-block;
-	    width: 3px;
+	    width: 1px;
 	    height: 100%;
-	    background: lighten(#434E5E, 40%);
+	    background: #7d858e;
 	    left: 6px;
 	    top: 4px;
 	    position: absolute;
-	}
+	
 }
 
-.resume-timeline-item {
-	&:before {
+.resume-timeline-item::before {
+	
 		content: "";
 		display: inline-block;
 		position: absolute;
@@ -125,19 +122,18 @@ a {
 		top: 3px;
 		width: 15px;
 		height: 15px;
-		border: 4px solid lighten(#434E5E, 10%);
+		border: 2px solid #7d858e;
 		background: white;
-		@include border-radius(50%);
-		
+		border-radius: 50%;
+	
 	}
-}
 
 .resume-progress {
 	height: 0.6rem;
 }
 
 .resume-company-name {
-	color: lighten(#434E5E, 10%);;
+	color: lighten(#434E5E, 10%);
 	font-size: 0.875rem;
 	font-weight: 500;
 }
@@ -184,9 +180,9 @@ a {
 .resume-award-icon {
 	left: 0;
 	top: 4px;
-	color: #01A6F0;/*lighten(#434E5E, 40%);*/
-}
+	color: #01A6F0;
 
+}
 .resume-award-name {
 	font-weight:bold;
 	color: #434E5E;
@@ -200,14 +196,8 @@ a {
 	color: #434E5E;
 }
 
-.footer {
 
-	.fa-heart {
-		color: #fb866a;
-	}
-}
 
-// Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
     .resume-wrapper {
 	    padding-top: 0;
@@ -218,7 +208,7 @@ a {
 	}
 	.resume-header .picture {
 		width: 120px;
-		@include border-radius(4px);
+		border-radius:4px;
 	}
 
 	
